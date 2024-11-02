@@ -1,0 +1,30 @@
+@page "/draw-line"
+@using BlazorDraw.Services
+@inject ImageService ImageService
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+
+<h3>Draw Line in 3D Space</h3>
+<button @onclick="GenerateImage">Generate Image</button>
+<div id="threejs-container" style="width: 50%; height: 50%;"></div>
+
+@code {
+    private string imagePath;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initializeThreeJS");
+        }
+    }
+
+    private async Task GenerateImage()
+    {
+        @* // Call JavaScript to take a screenshot and save the image
+        imagePath = await JS.InvokeAsync<string>("captureImage"); *@
+        await JS.InvokeVoidAsync("captureImage");
+    }
+}

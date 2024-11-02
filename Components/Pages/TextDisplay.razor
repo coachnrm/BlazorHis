@@ -1,0 +1,76 @@
+@page "/textdisplay"
+@using BlazorDraw.Components.Shared
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<h3>Order note</h3>
+<div style="display: flex; flex-direction:row;">
+    <div class="flex-onedayorder">
+        <h2 style="text-align:center;">One Day order</h2>
+        <div>
+            <button @onclick="@(() => SetInputText(CBC))">CBC</button>
+            <button @onclick="@(() => SetInputText(BUN))">BUN</button>
+            <button @onclick="@(() => SetInputText(Cr))">Cr</button>
+            <button @onclick="@(() => SetInputText(Elyte))">Elyte</button>
+            <button @onclick="AddComponent">+</button>
+        </div>
+        <input @bind="inputText" placeholder="Lab" size="50" />
+        <div>
+        @foreach (var component in components)
+        {
+            <NewInput />
+            <button @onclick="() => DeleteComponent(component)">Delete</button>
+            <br />
+        }
+        </div>
+        <p>Current Input: @inputText</p>
+        <button @onclick="ShowAllInputs">Show All Inputs</button>
+        <p>All Inputs: @allInputs</p>
+    </div>
+    <div class="flex-continueorder">
+        <h2 style="text-align:center;">Continuous order</h2>
+        <input  size="50"/>
+    </div>
+    <div class="flex-progress">
+        <h2 style="text-align:center;">Progress Note</h2>
+        <input  size="50"/>
+    </div>
+</div>
+
+
+@code {
+
+    private string CBC = "CBC";
+    private string BUN = "BUN";
+    private string Cr = "Cr";
+    private string Elyte = "Elyte";
+    private string inputText = string.Empty;
+    private List<string> inputHistory = new List<string>();
+    private string allInputs = string.Empty;
+    private List<int> components = new List<int>();
+    private void SetInputText(string value)
+    {
+        if (!string.IsNullOrEmpty(inputText))
+        {
+            inputText += ", "; // Add a comma and space if inputText is not empty
+        }
+        inputText += value; // Append the new value to the existing inputText
+        inputHistory.Add(value); // Store the value in history
+    }
+
+     private void ShowAllInputs()
+    {
+        allInputs = string.Join(", ", inputHistory); // Join all inputs with a comma
+    }
+
+    private void AddComponent()
+    {
+        components.Add(components.Count + 1); // Add a new item to the list
+    }
+
+    private void DeleteComponent(int component)
+    {
+        components.Remove(component); // Remove the specified component from the list
+    }
+}

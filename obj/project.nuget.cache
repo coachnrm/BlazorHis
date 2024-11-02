@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "cTeGzfKK65A=",
+  "success": true,
+  "projectFilePath": "/Users/home/Desktop/BlazorDraw/BlazorDraw.csproj",
+  "expectedPackageFiles": [
+    "/Users/home/.nuget/packages/microsoft.win32.systemevents/8.0.0/microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "/Users/home/.nuget/packages/system.drawing.common/8.0.10/system.drawing.common.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

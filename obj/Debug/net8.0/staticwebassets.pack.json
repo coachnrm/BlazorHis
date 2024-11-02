@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/obj/Debug/net8.0/scopedcss/projectbundle/BlazorDraw.bundle.scp.css",
+      "PackagePath": "staticwebassets/BlazorDraw.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/home/Desktop/BlazorDraw/wwwroot/threejs-setup.js",
+      "PackagePath": "staticwebassets/threejs-setup.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazorDraw.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlazorDraw.props",
+      "PackagePath": "build\\BlazorDraw.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorDraw.props",
+      "PackagePath": "buildMultiTargeting\\BlazorDraw.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazorDraw.props",
+      "PackagePath": "buildTransitive\\BlazorDraw.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
